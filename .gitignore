@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+src-tauri/target/
+src-tauri/gen/
+
+# Temporary scratch & large test artifacts
+scratch/
+*.log
+*.mp4
+*.pdb
+vc140.pdb
+start-mirrordeck.cmd
+
+# Heavy runtime engine binaries (downloaded via scripts/bootstrap.ps1)
+bin/
+src-tauri/bin/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

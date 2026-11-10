@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: 246 247 250;
+  --surface: 255 255 255;
+  --surface-2: 240 242 246;
+  --text: 20 24 33;
+  --text-muted: 99 106 120;
+  --border: 228 231 238;
+  --accent-light: #2563eb;
+  --accent-dark: #6092fa;
+  --accent-soft-light: rgba(37, 80, 235, 0.12);
+  --accent-soft-dark: rgba(96, 146, 250, 0.14);
+  --accent: var(--accent-light);
+  --accent-soft: var(--accent-soft-light);
+}
+
+.dark {
+  --bg: 15 17 22;
+  --surface: 24 27 34;
+  --surface-2: 32 36 45;
+  --text: 235 238 244;
+  --text-muted: 148 156 174;
+  --border: 44 48 58;
+  --accent: var(--accent-dark);
+  --accent-soft: var(--accent-soft-dark);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(var(--bg));
+  color: rgb(var(--text));
+  font-family: theme('fontFamily.sans');
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--surface))] shadow-card;
+  }
+  .surface-2 {
+    background-color: rgb(var(--surface-2));
+  }
+  .text-muted {
+    color: rgb(var(--text-muted));
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(var(--border)) transparent;
+}
